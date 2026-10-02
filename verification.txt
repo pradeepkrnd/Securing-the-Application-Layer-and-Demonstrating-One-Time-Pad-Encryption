@@ -1,0 +1,34 @@
+PASS Valid username: HTTP 200
+PASS Missing API key: HTTP 401
+PASS Incorrect API key: HTTP 401
+PASS GET method: HTTP 405
+PASS Wrong media type: HTTP 415
+PASS Misleading JSON prefix: HTTP 415
+PASS Script-like username: HTTP 400
+PASS Extra JSON field: HTTP 400
+PASS Duplicate JSON field: HTTP 400
+PASS Malformed UTF-8: HTTP 400
+PASS Oversized body: HTTP 413
+PASS Exact path required: HTTP 404
+PASS Minimum length accepted: HTTP 200
+PASS Maximum length accepted: HTTP 200
+PASS Short username rejected: HTTP 400
+PASS Long username rejected: HTTP 400
+PASS UTF-8 media parameter: HTTP 200
+PASS concurrent quota: 5 HTTP 200 and 5 HTTP 429
+PASS missing startup secret: exit 1
+TOTAL: 19 checks passed; security headers checked on 17 responses
+
+ONE TIME PAD VERIFICATION
+Plaintext : MY NAME IS UNKNOWN
+Byte count: 18
+Demo key  : b9d60057f986ec23a559b9e7f06d71eaf6dd
+Ciphertext: f48f2019b8cba903ec0a99b2be263fa5a193
+Recovered : MY NAME IS UNKNOWN
+PASS required plaintext round trip
+PASS known XOR vector 4d XOR 2a = 67
+PASS unequal key length rejected
+PASS empty input
+PASS 1000 varied binary round trips
+PASS all 256 byte values
+TOTAL: 6 checks passed

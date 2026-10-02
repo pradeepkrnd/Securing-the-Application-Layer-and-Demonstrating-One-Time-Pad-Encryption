@@ -1,0 +1,12 @@
+Plaintext : MY NAME IS UNKNOWN
+Byte count: 18
+Demo key  : b9d60057f986ec23a559b9e7f06d71eaf6dd
+Ciphertext: f48f2019b8cba903ec0a99b2be263fa5a193
+Recovered : MY NAME IS UNKNOWN
+PASS required plaintext round trip
+PASS known XOR vector 4d XOR 2a = 67
+PASS unequal key length rejected
+PASS empty input
+PASS 1000 varied binary round trips
+PASS all 256 byte values
+TOTAL: 6 checks passed
